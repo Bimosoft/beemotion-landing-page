@@ -4,113 +4,780 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Rainblur Landing Page Template: Tailwind Toolbox</title>
-    <meta name="description" content="" />
-    <meta name="keywords" content="" />
+    <title>BeeMotion</title>
+    <meta name="description" content="Your Personalized Gym Tracking App" />
+    <meta name="keywords" content="fitness, gym, tracking, app, BeeMotion" />
 
-    <link rel="stylesheet" href="https://unpkg.com/tailwindcss@2.2.19/dist/tailwind.min.css"/>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/tailwindcss@2.2.19/dist/tailwind.min.css"
+    />
     <!--Replace with your tailwind.css once created-->
-    <link href="https://unpkg.com/@tailwindcss/custom-forms/dist/custom-forms.min.css" rel="stylesheet" />
-
+    <link
+      href="https://unpkg.com/@tailwindcss/custom-forms/dist/custom-forms.min.css"
+      rel="stylesheet"
+    />
     <style>
-      @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
 
       html {
-        font-family: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+        font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI",
+          Roboto, "Helvetica Neue", Arial, sans-serif;
+      }
+
+      body {
+        background: linear-gradient(
+          135deg,
+          #0a0a0a 0%,
+          #1a1a2e 30%,
+          #16213e 70%,
+          #0f3460 100%
+        ) !important;
+        min-height: 100vh;
+      }
+
+      .gradient-primary {
+        background: linear-gradient(135deg, #00d4ff 0%, #091e3a 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        text-fill-color: transparent;
+      }
+
+      .gradient-accent {
+        background: linear-gradient(135deg, #00d4ff 0%, #00a8cc 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        text-fill-color: transparent;
+      }
+
+      .glow-effect {
+        box-shadow: 0 0 20px rgba(0, 212, 255, 0.3);
+      }
+
+      .card-dark {
+        background: rgba(26, 26, 46, 0.9);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(0, 212, 255, 0.2);
+      }
+
+      .btn-primary {
+        background: linear-gradient(135deg, #00d4ff 0%, #0099cc 100%);
+        transition: all 0.3s ease;
+      }
+
+      .btn-primary:hover {
+        background: linear-gradient(135deg, #00a8cc 0%, #007399 100%);
+        transform: translateY(-2px);
+        box-shadow: 0 10px 25px rgba(0, 212, 255, 0.4);
+      }
+
+      .text-primary {
+        color: #00d4ff !important;
+      }
+      .text-secondary {
+        color: #8892b0 !important;
+      }
+      .text-accent {
+        color: #64ffda !important;
+      }
+
+      .social-icon {
+        color: #8892b0;
+        transition: all 0.3s ease;
+      }
+
+      .social-icon:hover {
+        color: #00d4ff;
+        transform: scale(1.1);
+      }
+
+      .hero-text {
+        background: linear-gradient(135deg, #ffffff 0%, #8892b0 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+
+      .feature-card {
+        background: rgba(26, 26, 46, 0.5);
+        border: 1px solid rgba(0, 212, 255, 0.1);
+        transition: all 0.3s ease;
+      }
+
+      .feature-card:hover {
+        border-color: rgba(0, 212, 255, 0.3);
+        transform: translateY(-5px);
+      }
+
+      .grabbing {
+        cursor: grabbing;
       }
     </style>
   </head>
-
-  <body class="leading-normal tracking-normal text-indigo-400 m-6 bg-cover bg-fixed" style="background-image: url('header.png');">
-    <div class="h-full">
+  <body class="leading-normal tracking-normal text-secondary">
+    <div class="min-h-screen">
       <!--Nav-->
-      <div class="w-full container mx-auto">
+      <nav class="w-full container mx-auto py-6">
         <div class="w-full flex items-center justify-between">
-          <a class="flex items-center text-indigo-400 no-underline hover:no-underline font-bold text-2xl lg:text-4xl" href="#">
-            Rain<span class="bg-clip-text text-transparent bg-gradient-to-r from-green-400 via-pink-500 to-purple-500">blur</span>
+          <a
+            class="flex items-center no-underline hover:no-underline font-bold text-2xl lg:text-4xl"
+            href="#"
+          >
+            <span style="font-size: inherit; font-weight: inherit">
+              <span
+                style="
+                  color: #00d4ff;
+                  text-shadow: 0 0 8px #00d4ff, 0 0 15px #00d4ff;
+                "
+                >Bee</span
+              ><span
+                style="
+                  color: #ffffff;
+                  text-shadow: 0 0 8px rgba(173, 216, 230, 0.7),
+                    0 0 15px rgba(173, 216, 230, 0.5);
+                "
+                >Motion</span
+              >
+            </span>
           </a>
 
-          <div class="flex w-1/2 justify-end content-center">
-            <a class="inline-block text-blue-300 no-underline hover:text-pink-500 hover:text-underline text-center h-10 p-2 md:h-auto md:p-4 transform hover:scale-125 duration-300 ease-in-out" href="https://twitter.com/intent/tweet?url=#">
-              <svg class="fill-current h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+          <div class="flex justify-end items-center space-x-4">
+            <a
+              href="https://www.google.com"
+              target="_blank"
+              class="social-icon"
+            >
+              <svg
+                class="fill-current h-6 w-6"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+              >
                 <path
-                  d="M30.063 7.313c-.813 1.125-1.75 2.125-2.875 2.938v.75c0 1.563-.188 3.125-.688 4.625a15.088 15.088 0 0 1-2.063 4.438c-.875 1.438-2 2.688-3.25 3.813a15.015 15.015 0 0 1-4.625 2.563c-1.813.688-3.75 1-5.75 1-3.25 0-6.188-.875-8.875-2.625.438.063.875.125 1.375.125 2.688 0 5.063-.875 7.188-2.5-1.25 0-2.375-.375-3.375-1.125s-1.688-1.688-2.063-2.875c.438.063.813.125 1.125.125.5 0 1-.063 1.5-.25-1.313-.25-2.438-.938-3.313-1.938a5.673 5.673 0 0 1-1.313-3.688v-.063c.813.438 1.688.688 2.625.688a5.228 5.228 0 0 1-1.875-2c-.5-.875-.688-1.813-.688-2.75 0-1.063.25-2.063.75-2.938 1.438 1.75 3.188 3.188 5.25 4.25s4.313 1.688 6.688 1.813a5.579 5.579 0 0 1 1.5-5.438c1.125-1.125 2.5-1.688 4.125-1.688s3.063.625 4.188 1.813a11.48 11.48 0 0 0 3.688-1.375c-.438 1.375-1.313 2.438-2.563 3.188 1.125-.125 2.188-.438 3.313-.875z"
-                ></path>
+                  d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"
+                />
               </svg>
             </a>
             <a
-              class="inline-block text-blue-300 no-underline hover:text-pink-500 hover:text-underline text-center h-10 p-2 md:h-auto md:p-4 transform hover:scale-125 duration-300 ease-in-out"
-              href="https://www.facebook.com/sharer/sharer.php?u=#"
+              href="https://www.google.com"
+              target="_blank"
+              class="social-icon"
             >
-              <svg class="fill-current h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
-                <path d="M19 6h5V0h-5c-3.86 0-7 3.14-7 7v3H8v6h4v16h6V16h5l1-6h-6V7c0-.542.458-1 1-1z"></path>
+              <svg
+                class="fill-current h-6 w-6"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"
+                />
+              </svg>
+            </a>
+            <a
+              href="https://www.google.com"
+              target="_blank"
+              class="social-icon"
+            >
+              <svg
+                class="fill-current h-6 w-6"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-5.2 1.74 2.89 2.89 0 012.31-4.64 2.93 2.93 0 01.88.13V9.4a6.84 6.84 0 00-1-.05A6.33 6.33 0 005 20.1a6.34 6.34 0 0010.86-4.43v-7a8.16 8.16 0 004.77 1.52v-3.4a4.85 4.85 0 01-1-.1z"
+                />
               </svg>
             </a>
           </div>
         </div>
-      </div>
-
-      <!--Main-->
-      <div class="container pt-24 md:pt-36 mx-auto flex flex-wrap flex-col md:flex-row items-center">
-        <!--Left Col-->
-        <div class="flex flex-col w-full xl:w-2/5 justify-center lg:items-start overflow-y-hidden">
-          <h1 class="my-4 text-3xl md:text-5xl text-white opacity-75 font-bold leading-tight text-center md:text-left">
-            Main
-            <span class="bg-clip-text text-transparent bg-gradient-to-r from-green-400 via-pink-500 to-purple-500">
-              Hero Message
-            </span>
-            to sell yourself!
-          </h1>
-          <p class="leading-normal text-base md:text-2xl mb-8 text-center md:text-left">
-            Sub-hero message, not too long and not too short. Make it just right!
-          </p>
-
-          <form class="bg-gray-900 opacity-75 w-full shadow-lg rounded-lg px-8 pt-6 pb-8 mb-4">
-            <div class="mb-4">
-              <label class="block text-blue-300 py-2 font-bold mb-2" for="emailaddress">
-                Signup for our newsletter
-              </label>
-              <input
-                class="shadow appearance-none border rounded w-full p-3 text-gray-700 leading-tight focus:ring transform transition hover:scale-105 duration-300 ease-in-out"
-                id="emailaddress"
-                type="text"
-                placeholder="you@somewhere.com"
-              />
-            </div>
-
-            <div class="flex items-center justify-between pt-4">
-              <button
-                class="bg-gradient-to-r from-purple-800 to-green-500 hover:from-pink-500 hover:to-green-500 text-white font-bold py-2 px-4 rounded focus:ring transform transition hover:scale-105 duration-300 ease-in-out"
-                type="button"
+      </nav>
+      <!--Hero Section-->
+      <section class="container mx-auto px-6 py-16">
+        <div class="flex flex-wrap items-center">
+          <!-- Left Content -->
+          <div class="w-full lg:w-1/2 mb-12 lg:mb-0">
+            <div class="max-w-lg">
+              <h1
+                class="text-4xl lg:text-6xl font-bold text-white mb-6 leading-tight"
               >
-                Sign Up
-              </button>
+                Craft, Track & Share <br />
+                Your
+                <span class="gradient-accent">Ultimate Fitness</span> Journey
+              </h1>
+              <p class="text-xl text-secondary mb-8 leading-relaxed">
+                BeeMotion empowers you to build personalized workout routines,
+                meticulously track your sets, reps, and progress, count
+                calories, and share your achievements with a vibrant community.
+                Take control of your fitness like never before!
+              </p>
+
+              <!-- CTA Buttons
+              <div class="flex flex-col sm:flex-row gap-4 mb-8">
+                <button
+                  class="btn-primary text-white font-semibold py-4 px-8 rounded-lg"
+                >
+                  Start Free Trial
+                </button>
+                <button
+                  class="border-2 border-primary text-primary font-semibold py-4 px-8 rounded-lg hover:bg-primary hover:text-white transition-all duration-300"
+                >
+                  Watch Demo
+                </button>
+              </div>
+               -->
+
+              <!-- Newsletter Signup 
+              <div class="card-dark rounded-xl p-6">
+                <h3 class="text-lg font-semibold text-white mb-4">
+                  Get Early Access
+                </h3>
+                <div class="flex flex-col sm:flex-row gap-3">
+                  <input
+                    type="email"
+                    placeholder="Enter your email"
+                    class="flex-1 bg-gray-800 border border-gray-700 rounded-lg px-4 py-3 text-white placeholder-gray-400 focus:outline-none focus:border-primary transition-colors"
+                  />
+                  <button
+                    class="btn-primary text-white font-semibold py-3 px-6 rounded-lg whitespace-nowrap"
+                  >
+                    Join Waitlist
+                  </button>
+                </div>
+              </div>
+              -->
             </div>
-          </form>
-        </div>
+          </div>
 
-        <!--Right Col-->
-        <div class="w-full xl:w-3/5 p-12 overflow-hidden">
-          <img class="mx-auto w-full md:w-4/5 transform -rotate-6 transition hover:scale-105 duration-700 ease-in-out hover:rotate-6" src="macbook.svg" />
-        </div>
-
-        <div class="mx-auto md:pt-16">
-          <p class="text-blue-400 font-bold pb-8 lg:pb-6 text-center">
-            Download our app:
-          </p>
-          <div class="flex w-full justify-center md:justify-start pb-24 lg:pb-0 fade-in">
-            <img src="App Store.svg" class="h-12 pr-12 transform hover:scale-125 duration-300 ease-in-out" />
-            <img src="Play Store.svg" class="h-12 transform hover:scale-125 duration-300 ease-in-out" />
+          <!-- Right Content -->
+          <div class="w-full lg:w-1/2 lg:pl-12">
+            <div class="relative">
+              <div class="glow-effect rounded-2xl overflow-hidden">
+                <img
+                  src="macbook.svg"
+                  alt="BeeMotion App Preview"
+                  class="w-full h-auto transform hover:scale-105 transition-transform duration-700"
+                />
+              </div>
+            </div>
           </div>
         </div>
+      </section>
 
-        <!--Footer-->
-        <div class="w-full pt-16 pb-6 text-sm text-center md:text-left fade-in">
-          <a class="text-gray-500 no-underline hover:no-underline" href="#">&copy; App 2020</a>
-          - Template by
-          <a class="text-gray-500 no-underline hover:no-underline" href="https://www.tailwindtoolbox.com">TailwindToolbox.com</a>
+      <!-- Features Section -->
+      <section class="container mx-auto px-6 py-16">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl lg:text-4xl font-bold text-white mb-4">
+            Unlock Your Potential with
+            <span class="gradient-accent">BeeMotion</span>
+          </h2>
+          <p class="text-xl text-secondary max-w-2xl mx-auto">
+            Discover the powerful tools BeeMotion offers to help you create,
+            track, analyze, and share your fitness journey.
+          </p>
         </div>
-      </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <!-- Feature Card 1: Customizable Workouts & Tracking -->
+          <div class="feature-card rounded-xl p-6 text-center flex flex-col">
+            <div
+              class="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-4 glow-effect"
+            >
+              <svg
+                class="w-8 h-8 text-white"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"
+                ></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold text-white mb-2">
+              Custom Workouts & Tracking
+            </h3>
+            <p class="text-secondary flex-grow">
+              Design your perfect workout routines from scratch or adapt
+              existing ones. Log every exercise, set, and rep with precision.
+            </p>
+          </div>
+
+          <!-- Feature Card 2: Progress Analytics -->
+          <div class="feature-card rounded-xl p-6 text-center flex flex-col">
+            <div
+              class="w-16 h-16 bg-accent rounded-full flex items-center justify-center mx-auto mb-4 glow-effect"
+            >
+              <svg
+                class="w-8 h-8 text-white"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"
+                ></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold text-white mb-2">
+              Advanced Progress Analytics
+            </h3>
+            <p class="text-secondary flex-grow">
+              Visualize your gains with detailed charts and reports. Track
+              strength improvements, workout consistency, and more to stay
+              motivated.
+            </p>
+          </div>
+
+          <!-- Feature Card 3: Share & Discover Routines -->
+          <div class="feature-card rounded-xl p-6 text-center flex flex-col">
+            <div
+              class="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-4 glow-effect"
+            >
+              <svg
+                class="w-8 h-8 text-white"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"
+                ></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold text-white mb-2">
+              Share & Discover Routines
+            </h3>
+            <p class="text-secondary flex-grow">
+              Share your favorite workout routines with friends or the BeeMotion
+              community. Discover new workouts from others to keep things fresh.
+            </p>
+          </div>
+
+          <!-- Feature Card 4: Calorie & Nutrition Tracking -->
+          <div class="feature-card rounded-xl p-6 text-center flex flex-col">
+            <div
+              class="w-16 h-16 bg-accent rounded-full flex items-center justify-center mx-auto mb-4 glow-effect"
+            >
+              <svg
+                class="w-8 h-8 text-white"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"
+                ></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold text-white mb-2">
+              Calorie & Nutrition Tracking
+            </h3>
+            <p class="text-secondary flex-grow">
+              Log your meals and track your calorie intake alongside your
+              workouts. Get a holistic view of your health and fitness.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Download Section -->
+      <section class="container mx-auto px-6 py-16">
+        <div class="text-center">
+          <h2 class="text-3xl lg:text-4xl font-bold text-white mb-6">
+            Ready to Transform Your
+            <span class="gradient-accent">Fitness Journey</span>?
+          </h2>
+          <p class="text-xl text-secondary mb-12 max-w-2xl mx-auto">
+            Download BeeMotion today and join thousands of users who have
+            already transformed their fitness routine.
+          </p>
+
+          <div class="flex justify-center items-center space-x-6">
+            <a
+              href="https://www.google.com"
+              target="_blank"
+              class="transform hover:scale-110 transition-transform duration-300"
+            >
+              <img
+                src="App Store.svg"
+                alt="Download on App Store"
+                class="h-14 w-auto"
+              />
+            </a>
+            <a
+              href="https://www.google.com"
+              target="_blank"
+              class="transform hover:scale-110 transition-transform duration-300"
+            >
+              <img
+                src="Play Store.svg"
+                alt="Get it on Google Play"
+                class="h-14 w-auto"
+              />
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Testimonials Section -->
+      <section class="container mx-auto px-6 py-16">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl lg:text-4xl font-bold text-white mb-4">
+            What Our <span class="gradient-accent">Users Say</span>
+          </h2>
+          <p class="text-xl text-secondary max-w-2xl mx-auto">
+            Hear from fitness enthusiasts who are already loving BeeMotion.
+          </p>
+        </div>
+
+        <div class="relative overflow-hidden group" id="testimonial-carousel">
+          <div
+            class="flex transition-transform duration-500 ease-in-out"
+            id="testimonial-track"
+          >
+            <!-- Testimonial Card 1 -->
+            <div class="w-full md:w-1/2 lg:w-1/3 flex-shrink-0 p-4">
+              <div class="card-dark rounded-xl p-6 flex flex-col h-full">
+                <p class="text-secondary italic mb-4 flex-grow">
+                  "BeeMotion has completely changed how I track my gym sessions.
+                  The custom routines and set/rep tracking are game-changers! So
+                  intuitive."
+                </p>
+                <div class="mt-auto pt-4 border-t border-gray-700">
+                  <p class="text-white font-semibold">Alex R.</p>
+                  <p class="text-sm text-primary">Verified User</p>
+                </div>
+              </div>
+            </div>
+            <!-- Testimonial Card 2 -->
+            <div class="w-full md:w-1/2 lg:w-1/3 flex-shrink-0 p-4">
+              <div class="card-dark rounded-xl p-6 flex flex-col h-full">
+                <p class="text-secondary italic mb-4 flex-grow">
+                  "The progress analytics are incredibly detailed. I finally see
+                  my strength gains clearly. Sharing routines with friends is a
+                  fantastic bonus!"
+                </p>
+                <div class="mt-auto pt-4 border-t border-gray-700">
+                  <p class="text-white font-semibold">Jessica M.</p>
+                  <p class="text-sm text-primary">Fitness Coach</p>
+                </div>
+              </div>
+            </div>
+            <!-- Testimonial Card 3 -->
+            <div class="w-full md:w-1/2 lg:w-1/3 flex-shrink-0 p-4">
+              <div class="card-dark rounded-xl p-6 flex flex-col h-full">
+                <p class="text-secondary italic mb-4 flex-grow">
+                  "Love the calorie counting feature alongside workout tracking.
+                  It gives a complete picture of my health. The community is
+                  super motivating too!"
+                </p>
+                <div class="mt-auto pt-4 border-t border-gray-700">
+                  <p class="text-white font-semibold">Mike P.</p>
+                  <p class="text-sm text-primary">Gym Enthusiast</p>
+                </div>
+              </div>
+            </div>
+            <!-- Testimonial Card 4 -->
+            <div class="w-full md:w-1/2 lg:w-1/3 flex-shrink-0 p-4">
+              <div class="card-dark rounded-xl p-6 flex flex-col h-full">
+                <p class="text-secondary italic mb-4 flex-grow">
+                  "Creating and saving my own workout plans is so easy with
+                  BeeMotion. I can finally ditch my messy notebooks. The
+                  interface is clean and user-friendly."
+                </p>
+                <div class="mt-auto pt-4 border-t border-gray-700">
+                  <p class="text-white font-semibold">Sarah L.</p>
+                  <p class="text-sm text-primary">Dedicated Athlete</p>
+                </div>
+              </div>
+            </div>
+            <!-- Testimonial Card 5 -->
+            <div class="w-full md:w-1/2 lg:w-1/3 flex-shrink-0 p-4">
+              <div class="card-dark rounded-xl p-6 flex flex-col h-full">
+                <p class="text-secondary italic mb-4 flex-grow">
+                  "Being able to track my sets, reps, and weight for each
+                  exercise helps me push my limits every session. The detailed
+                  history is invaluable."
+                </p>
+                <div class="mt-auto pt-4 border-t border-gray-700">
+                  <p class="text-white font-semibold">David K.</p>
+                  <p class="text-sm text-primary">Strength Trainer</p>
+                </div>
+              </div>
+            </div>
+            <!-- Testimonial Card 6 -->
+            <div class="w-full md:w-1/2 lg:w-1/3 flex-shrink-0 p-4">
+              <div class="card-dark rounded-xl p-6 flex flex-col h-full">
+                <p class="text-secondary italic mb-4 flex-grow">
+                  "The combination of workout planning, progress tracking, and
+                  calorie counting in one app is exactly what I needed.
+                  BeeMotion keeps me on track!"
+                </p>
+                <div class="mt-auto pt-4 border-t border-gray-700">
+                  <p class="text-white font-semibold">Emily B.</p>
+                  <p class="text-sm text-primary">Health Conscious User</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Navigation Buttons (Optional but recommended for accessibility) -->
+          <button
+            id="prev-testimonial"
+            class="absolute top-1/2 left-0 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-full hover:bg-opacity-75 focus:outline-none opacity-0 group-hover:opacity-100 transition-opacity z-10 ml-2"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-6 w-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M15 19l-7-7 7-7"
+              />
+            </svg>
+          </button>
+          <button
+            id="next-testimonial"
+            class="absolute top-1/2 right-0 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-full hover:bg-opacity-75 focus:outline-none opacity-0 group-hover:opacity-100 transition-opacity z-10 mr-2"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-6 w-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M9 5l7 7-7 7"
+              />
+            </svg>
+          </button>
+        </div>
+      </section>
+      <!-- End Testimonials Section -->
+
+      <!-- Footer -->
+      <footer class="border-t border-gray-800 py-8">
+        <div class="container mx-auto px-6">
+          <div class="flex flex-col md:flex-row justify-between items-center">
+            <div class="text-secondary text-sm mb-4 md:mb-0">
+              &copy; 2025 BeeMotion. All rights reserved.
+            </div>
+            <div class="text-secondary text-sm">
+              Made with ❤️ for fitness enthusiasts worldwide
+            </div>
+          </div>
+        </div>
+      </footer>
     </div>
+
+    <script>
+      const carousel = document.getElementById("testimonial-carousel");
+      const track = document.getElementById("testimonial-track");
+      const prevButton = document.getElementById("prev-testimonial");
+      const nextButton = document.getElementById("next-testimonial");
+
+      if (carousel && track && prevButton && nextButton) {
+        let cards = Array.from(track.children);
+        let cardWidth = 0;
+        let currentIndex = 0;
+        let autoScrollInterval;
+        let isDragging = false;
+        let startX;
+        let currentTranslate = 0;
+        let prevTranslate = 0;
+        let animationID;
+
+        function getVisibleCardsCount() {
+          if (window.innerWidth < 768) return 1; // md breakpoint
+          if (window.innerWidth < 1024) return 2; // lg breakpoint
+          return 3;
+        }
+
+        function updateCarouselDimensions() {
+          if (cards.length === 0 || !cards[0].offsetParent) {
+            // Elements not ready, try again
+            requestAnimationFrame(updateCarouselDimensions);
+            return;
+          }
+          const carouselWidth = carousel.offsetWidth;
+          const visibleCards = getVisibleCardsCount();
+          cardWidth = carouselWidth / visibleCards;
+
+          // Ensure all cards (flex items) have a consistent base width for calculation
+          // Tailwind's w-full, md:w-1/2, lg:w-1/3 should handle this,
+          // but we get the actual width of the first card as the reference.
+          // This assumes all cards will have the same width within their responsive tier.
+          cardWidth = cards[0].getBoundingClientRect().width;
+
+          // Re-apply current position without animation
+          goToSlide(currentIndex, false);
+        }
+
+        function goToSlide(index, smooth = true) {
+          const visibleCards = getVisibleCardsCount();
+          const maxIndex = Math.max(0, cards.length - visibleCards);
+
+          if (index < 0) {
+            index = 0;
+          } else if (index > maxIndex) {
+            index = maxIndex;
+          }
+
+          currentTranslate = -index * cardWidth;
+          track.style.transition = smooth
+            ? "transform 0.5s ease-in-out"
+            : "none";
+          track.style.transform = `translateX(${currentTranslate}px)`;
+          currentIndex = index;
+          prevTranslate = currentTranslate; // Update prevTranslate after a successful slide
+        }
+
+        function startAutoScroll() {
+          stopAutoScroll();
+          autoScrollInterval = setInterval(() => {
+            let nextIndex = currentIndex + 1;
+            const visibleCards = getVisibleCardsCount();
+            if (nextIndex > cards.length - visibleCards) {
+              nextIndex = 0; // Loop back to start
+            }
+            goToSlide(nextIndex);
+          }, 5000);
+        }
+
+        function stopAutoScroll() {
+          clearInterval(autoScrollInterval);
+          cancelAnimationFrame(animationID);
+        }
+
+        function dragStart(e) {
+          isDragging = true;
+          startX = e.type.includes("mouse") ? e.pageX : e.touches[0].clientX;
+          prevTranslate = currentTranslate; // Store current position before drag
+          track.style.transition = "none";
+          stopAutoScroll();
+          carousel.classList.add("grabbing");
+          animationID = requestAnimationFrame(animationLoop);
+        }
+
+        function dragMove(e) {
+          if (!isDragging) return;
+          const currentX = e.type.includes("mouse")
+            ? e.pageX
+            : e.touches[0].clientX;
+          const diffX = currentX - startX;
+          currentTranslate = prevTranslate + diffX;
+
+          // Optional: Add boundary checks during drag if desired
+          // const maxScroll = 0;
+          // const minScroll = -( (cards.length - getVisibleCardsCount()) * cardWidth );
+          // if (currentTranslate > maxScroll) currentTranslate = maxScroll;
+          // if (currentTranslate < minScroll) currentTranslate = minScroll;
+
+          track.style.transform = `translateX(${currentTranslate}px)`;
+        }
+
+        function animationLoop() {
+          if (isDragging) {
+            // We don't need to do anything here if dragMove updates transform directly
+            // requestAnimationFrame(animationLoop);
+          }
+        }
+
+        function dragEnd() {
+          if (!isDragging) return;
+          isDragging = false;
+          cancelAnimationFrame(animationID);
+          carousel.classList.remove("grabbing");
+
+          const movedBy = currentTranslate - prevTranslate;
+          const sensitivity = cardWidth / 4; // How much drag to trigger a slide change
+
+          if (movedBy < -sensitivity) {
+            // Swiped left (next)
+            goToSlide(currentIndex + 1);
+          } else if (movedBy > sensitivity) {
+            // Swiped right (prev)
+            goToSlide(currentIndex - 1);
+          } else {
+            // Not enough swipe, snap back
+            goToSlide(currentIndex);
+          }
+          startAutoScroll();
+        }
+
+        // Event Listeners
+        prevButton.addEventListener("click", () => {
+          goToSlide(currentIndex - 1);
+          stopAutoScroll(); // Stop current auto-scroll
+          startAutoScroll(); // Restart auto-scroll timer
+        });
+
+        nextButton.addEventListener("click", () => {
+          goToSlide(currentIndex + 1);
+          stopAutoScroll();
+          startAutoScroll();
+        });
+
+        carousel.addEventListener("mousedown", dragStart);
+        carousel.addEventListener("touchstart", dragStart, { passive: true });
+
+        carousel.addEventListener("mousemove", dragMove);
+        carousel.addEventListener("touchmove", dragMove, { passive: true });
+
+        carousel.addEventListener("mouseup", dragEnd);
+        carousel.addEventListener("mouseleave", () => {
+          // If mouse leaves carousel while dragging
+          if (isDragging) dragEnd();
+        });
+        carousel.addEventListener("touchend", dragEnd);
+
+        carousel.addEventListener("mouseenter", stopAutoScroll);
+        carousel.addEventListener("mouseleave", startAutoScroll);
+
+        // Initial setup
+        // Use a small timeout or rAF to ensure layout is complete
+        requestAnimationFrame(() => {
+          cards = Array.from(track.children); // Re-evaluate cards in case of dynamic content
+          if (cards.length > 0) {
+            updateCarouselDimensions();
+            startAutoScroll();
+          }
+        });
+        window.addEventListener("resize", () => {
+          if (cards.length > 0) {
+            updateCarouselDimensions();
+          }
+        });
+      } else {
+        console.warn(
+          "Testimonial carousel elements not found. Carousel will not be initialized."
+        );
+      }
+    </script>
   </body>
 </html>
